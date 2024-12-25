@@ -1,0 +1,305 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="../Styles/Trang chủ/test noithat.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .product-section {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .product-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .product-image img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-details {
+            flex: 2;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-details h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .product-details p {
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        .price {
+            font-size: 20px;
+            color: #e91e63;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            margin-top: 40px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .description h2 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .description p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .review-section {
+            margin-top: 40px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .review-section h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 20px;
+        }
+
+        .rating span {
+            font-size: 18px;
+            color: #ff9800;
+        }
+
+        .review-item {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+
+        .review-item:last-child {
+            border-bottom: none;
+        }
+
+        .review-item .user {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .review-item .comment {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .add-review {
+            margin-top: 20px;
+        }
+
+        .add-review textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .add-review button {
+            background-color: #1976d2;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .add-review button:hover {
+            background-color: #155aa8;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../test noithat.html">
+                    <img src="../images/logo mono.png" alt="Bedroom Store Logo">
+                </a>
+            </div>
+
+            <div class="center-header">
+                <div class="search-bar">
+                    <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                    <button class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+    
+                <div class="auth-buttons">
+                    <a href="#" onclick="showNotification()">Đăng nhập</a>
+                    <a href="#" onclick="showNotification()">Đăng ký</a>
+                </div>
+            </div>
+
+            <div class="cart">
+                <a href="#" onclick="showNotification()">🛒 Giỏ Hàng</a>
+            </div>
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li class="dropdown">
+                    <a href="#products">Sản Phẩm</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tuquanao.html">Tủ quần áo</a></li>
+                        <li><a href="giuongngu.html">Giường ngủ</a></li>
+                        <li><a href="tudaugiuong.html">Tủ đầu giường</a></li>
+                        <li><a href="bantrangdiem.html">Bàn trang điểm</a></li>
+                    </ul>
+                </li>
+                <li><a href="#promotions">Khuyến mãi</a></li>
+                <li class="dropdown">
+                    <a href="#news">Tin tức</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../tintuc/Media/tintuc.html">Media</a></li>
+                        <li><a href="../tintuc/News/tintuc-news.html">News</a></li>
+                        <li><a href="../tintuc/Báo chí/tintuc-baochi.html">Báo chí</a></li>
+                    </ul>
+                </li>
+                <li><a href="../about us.html" target="_blank">About Us</a></li>
+                <li><a href="../showroom.html" target="_blank">Showroom</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Product Section -->
+        <div class="product-section">
+            <div class="product-image">
+                <img src="https://product.hstatic.net/200000065946/product/pro_mau_tu_nhien_noi_that_moho_combo_giuong_moho_rander_2m_2_f736d32838d84fe7909b0842f19c07c3_master.jpg" alt="Product Image">
+            </div>
+            <div class="product-details">
+                <h1>Combo Phòng Ngủ 2 Món MoNo RANDER</h1>
+                <p>SKU: MFRSBNBSS.N20</p>
+                <p class="price">6,990,000₫</p>
+                <p><strong>Kích thước:</strong> Dài 213 x Rộng 165 x Cao 100 cm</p>
+                <p><strong>Chất liệu:</strong> Gỗ công nghiệp phủ Melamine CARB-P2</p>
+            </div>
+        </div>
+
+        <!-- Description Section -->
+        <div class="description">
+            <h2>Mô Tả Sản Phẩm</h2>
+            <p>Combo Phòng Ngủ 2 Món MoNo RANDER là một sản phẩm tuyệt vời cho không gian phòng ngủ của bạn. Với thiết kế đơn giản nhưng tinh tế, chiếc giường này sẽ mang đến sự gọn gàng và tiện nghi cho căn phòng. Chất liệu gỗ bền bỉ, dễ dàng lau chùi và bảo quản.</p>
+        </div>
+
+        <!-- Review Section -->
+        <div class="review-section">
+            <h2>Đánh Giá Sản Phẩm</h2>
+            <div class="rating">
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9734;</span>
+                <span>(4.0)</span>
+            </div>
+
+            <div class="review-item">
+                <div class="user">Nguyễn Văn An</div>
+                <div class="comment">Sản phẩm rất tốt, chất lượng vượt mong đợi!</div>
+            </div>
+
+            <div class="review-item">
+                <div class="user">Trần Thị B</div>
+                <div class="comment">Giao hàng nhanh, đóng gói cẩn thận, rất hài lòng.</div>
+            </div>
+
+            <div class="add-review">
+                <textarea placeholder="Viết đánh giá của bạn..." rows="4"></textarea>
+                <button>Gửi Đánh Giá</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h3>NỘI THẤT MONO</h3>
+                <p>Nội Thất MONO là thương hiệu đến từ nhóm 8 môn THIẾT KẾ WEB được thiết kế giao diện lấy cảm hứng từ Nội thất MOHO</p>
+                <img src="../images/bocongthuong.png" alt="Bộ Công Thương">
+                <img src="../images/dmca.png" alt="DMCA">
+            </div>
+    
+            <div class="footer-section services">
+                <h3>DỊCH VỤ</h3>
+                <ul>
+                    <li><a href="../csbh.html" target="_blank">Chính Sách Bán Hàng</a></li>
+                    <li><a href="../csghlđ.html" target="_blank">Chính Sách Giao Hàng & Lắp Đặt</a></li>
+                    <li><a href="../csbhbt.html" target="_blank">Chính Sách Bảo Hành & Bảo Trì</a></li>
+                    <li><a href="../csđt.html" target="_blank">Chính Sách Đổi Trả</a></li>
+                    <li><a href="../csđtbh.html" target="_blank">Chính Sách Đối Tác Bán Hàng</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section contact">
+                <h3>THÔNG TIN LIÊN HỆ</h3>
+                <p><strong>[Khu Vực Tp. Hà Nội]</strong></p>
+                <p>12 P.Chùa Bộc, Quang Trung, Đống Đa, Hà Nội (Nằm trong khuôn viên Học Viện Ngân Hàng)</p>
+                <p>Hotline: 0964 730 494</p>
+            </div>
+    
+            <div class="footer-section fanpage">
+                <h3>FANPAGE</h3>
+                <div class="fanpage-box">
+                    <a href="https://www.facebook.com/profile.php?id=61570847471173" target="_blank">
+                        <img src="../images/fanpage-sample.jpg" alt="Fanpage Mono">
+                    </a>
+                    <p>Theo dõi chúng tôi trên Facebook</p>
+                    <button onclick="window.open('https://www.facebook.com/profile.php?id=61570847471173', '_blank')">
+                        Theo dõi Trang
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer> 
+    
+    <script src="../Styles/Trang chủ/test noithat;.js"></script>
+</body>
+</html>
