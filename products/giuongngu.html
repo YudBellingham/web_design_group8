@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giường Ngủ</title>
     <link rel="stylesheet" href="../Styles/products/dat.css">
+    <style>
+        .add-to-cart {
+            background-color: #f7931e;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            display: block;
+        }
+        
+        .add-to-cart:hover {
+            background-color: #e67e22;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -24,13 +41,13 @@
                 </div>
     
                 <div class="auth-buttons">
-                    <a href="#" onclick="showNotification()">Đăng nhập</a>
-                    <a href="#" onclick="showNotification()">Đăng ký</a>
+                    <a href="../login/đangnhap.html">Đăng nhập</a>
+                    <a href="../login/đangky.html">Đăng ký</a>
                 </div>
             </div>
 
             <div class="cart">
-                <a href="#" onclick="showNotification()">🛒 Giỏ Hàng</a>
+                <a href="../cart.html">🛒 Giỏ Hàng</a>
             </div>
         </div>
 
@@ -45,7 +62,7 @@
                         <li><a href="bantrangdiem.html">Bàn trang điểm</a></li>
                     </ul>
                 </li>
-                <li><a href="#promotions">Khuyến mãi</a></li>
+                <li><a href="../khuyenmai.html">Khuyến mãi</a></li>
                 <li class="dropdown">
                     <a href="#news">Tin tức</a>
                     <ul class="dropdown-menu">
@@ -59,6 +76,12 @@
             </ul>
         </nav>
     </header>
+
+    <nav class="breadcrumb">
+        <a href="../test noithat.html">Trang chủ</a> / 
+        <a href="tuquanao.html">Sản Phẩm</a> / 
+        <span class="current">Giường Ngủ</span>
+    </nav>
 
     <div class="banner">
         <img src="https://file.hstatic.net/200000065946/collection/giuong-ngu-go__1__8317456467fb470b972df451e93538bf_2048x2048.png" alt="Banner Image">
@@ -74,8 +97,9 @@
             <div class="colors">
                 <div class="color-white"></div>
             </div>
+            <a href="../cart.html" class="add-to-cart" onclick="addToCart('Combo Phòng Ngủ 2 Món MoNo RANDER HOTEL (Có Ổ Điện)', 6990000)">Thêm vào giỏ hàng</a>
         </div>
-
+        
         <div class="product">
             <div class="discount">-30%</div>
             <img src="https://product.hstatic.net/200000065946/product/pro_trang_noi_that_moho_combo_giuong_moho_rander_2m4_1_9cbf61c7d108475b919e6ffae9ecfc76_large.jpg" alt="Giường Ngủ">
@@ -87,6 +111,7 @@
                 <div class="color-white"></div>
                 <div class="color-brown"></div>
             </div>
+            <a href="../cart.html" class="add-to-cart" onclick="addToCart('Combo Phòng Ngủ 3 Món MoNo RANDER', 8990000)">Thêm vào giỏ hàng</a>
         </div>
 
         <div class="product">
@@ -98,6 +123,7 @@
             <div class="colors">
                 <div class="color-brown"></div>
             </div>
+            <a href="../cart.html" class="add-to-cart" onclick="addToCart('Giường Ngủ Gỗ Có Hộc & Ổ Điện MoNo VIENNA', 7490000)">Thêm vào giỏ hàng</a>
         </div>
 
         <div class="product">
@@ -110,6 +136,7 @@
             <div class="colors">
                 <div class="color-brown"></div>
             </div>
+            <a href="../cart.html" class="add-to-cart" onclick="addToCart('Giường Ngủ Gỗ Tràm MoNo VLINE 601 Nhiều Kích Thước', 6290000)">Thêm vào giỏ hàng</a>
         </div>
 
         <div class="product">
@@ -122,6 +149,7 @@
             <div class="colors">
                 <div class="color-black"></div>
             </div>
+            <a href="../cart.html" class="add-to-cart" onclick="addToCart('Giường Ngủ Gỗ Tràm MoNo MALAGA 301 V2', 6490000)">Thêm vào giỏ hàng</a>
         </div>
 
         <div class="product">
@@ -136,6 +164,7 @@
                 <div class="color-brown"></div>
                 <div class="color-black"></div>
             </div>
+            <a href="../cart.html" class="add-to-cart" onclick="addToCart('Giường Ngủ Gỗ Tràm MoNo DALUMD 301', 5990000)">Thêm vào giỏ hàng</a>
         </div>
 
         <div class="product">
@@ -148,6 +177,7 @@
             <div class="colors">
                 <div class="color-brown"></div>
             </div>
+            <a href="../cart.html" class="add-to-cart" onclick="addToCart('Giường Ngủ Gỗ Tràm MoNo HOBRO 301', 9490000)">Thêm vào giỏ hàng</a>
         </div>
 
         <div class="product">
@@ -158,6 +188,7 @@
             <p class="price">7,290,000đ <span class="original-price">12,490,000đ</span></p>
             <p>Đã bán: 170</p>
             <div class="rating">★★★★★ (5)</div>
+            <a href="../cart.html" class="add-to-cart" onclick="addToCart('Giường Ngủ Gỗ Tự Nhiên Mây Mắt Cáo MoNo FIJI 401', 7290000)">Thêm vào giỏ hàng</a>
         </div>
         
         <div class="product">
@@ -170,6 +201,7 @@
             <div class="colors">
                 <div class="color-white"></div>
             </div>
+            <a href="../cart.html" class="add-to-cart" onclick="addToCart('Giường Ngủ Gỗ Cao Su MoNo HOBRO 301', 6990000)">Thêm vào giỏ hàng</a>
         </div>
 
         <div class="product">
@@ -180,8 +212,8 @@
             <p class="price">5,990,000đ <span class="original-price">6,780,000đ</span></p>
             <p>Đã bán: 51</p>
             <div class="rating">★★★★☆ (10)</div>
+            <a href="../cart.html" class="add-to-cart" onclick="addToCart('Combo Basic Phòng Ngủ Narvik 201 Màu Tự Nhiên', 5990000)">Thêm vào giỏ hàng</a>
         </div>
-        
 
         <div class="product">
             <div class="discount">-14%</div>
@@ -190,6 +222,7 @@
             <p class="price">6,490,000đ <span class="original-price">7,580,000đ</span></p>
             <p>Đã bán: 20</p>
             <div class="rating">★★★★★ (1)</div>
+            <a href="../cart.html" class="add-to-cart" onclick="addToCart('Combo Basic Phòng Ngủ Grenna 201 Màu Nâu', 6490000)">Thêm vào giỏ hàng</a>
         </div>
 
         <div class="product">
@@ -200,6 +233,7 @@
             <p class="price">9,990,000đ <span class="original-price">12,080,000đ</span></p>
             <p>Đã bán: 35</p>
             <div class="rating">★★★★★ (1)</div>
+            <a href="../cart.html" class="add-to-cart" onclick="addToCart('Combo Basic Phòng Ngủ Ubeda 201 Màu Tự Nhiên', 9990000)">Thêm vào giỏ hàng</a>
         </div>
     </main>
 
@@ -245,7 +279,20 @@
         </div>
     </footer> 
     
-    <script src="../Styles/Trang chủ/test noithat;.js"></script>
+    <script>
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        function addToCart(productName, productPrice) {
+            const product = {
+                name: productName,
+                price: productPrice,
+                quantity: 1
+            };
+            cart.push(product);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${productName} đã được thêm vào giỏ hàng!`);
+        }
+    </script>
 </body>
 </html>
 

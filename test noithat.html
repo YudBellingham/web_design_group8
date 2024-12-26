@@ -26,13 +26,13 @@
                 </div>
     
                 <div class="auth-buttons">
-                    <a href="#" onclick="showNotification()">Đăng nhập</a>
-                    <a href="#" onclick="showNotification()">Đăng ký</a>
+                    <a href="login/đangnhap.html">Đăng nhập</a>
+                    <a href="login/đangky.html">Đăng ký</a>
                 </div>
             </div>
 
             <div class="cart">
-                <a href="#" onclick="showNotification()">🛒 Giỏ Hàng</a>
+                <a href="cart.html">🛒 Giỏ Hàng</a>
             </div>
         </div>
 
@@ -47,7 +47,7 @@
                         <li><a href="products/bantrangdiem.html">Bàn trang điểm</a></li>
                     </ul>
                 </li>
-                <li><a href="#promotions">Khuyến mãi</a></li>
+                <li><a href="khuyenmai.html">Khuyến mãi</a></li>
                 <li class="dropdown">
                     <a href="#news">Tin tức</a>
                     <ul class="dropdown-menu">
@@ -105,19 +105,21 @@
                     <img src="https://product.hstatic.net/200000065946/product/pro_nau_noi_that_moho_tu_quan_ao_hobro_4_canh_2m_2_de601cd722564fbcb1c72a4aa85de17f_large.png" alt="Tủ quần áo">
                     <h3>Set tủ quần áo gỗ MONO HOBRO 301 4 cánh</h3>
                     <p>14,990,000 VNĐ</p>
-                    <button onclick="addToCart('Set tủ quần áo gỗ MONO HOBRO 301 4 cánh')">Thêm vào giỏ hàng</button>
+                    <a href="cart.html" class="add-to-cart" onclick="addToCart('Bàn Trang Điểm Gỗ Đa Năng MoNo VIENNA 202 Màu Nâu', 3990000)">Thêm vào giỏ hàng</a>
                 </div>
+
                 <div class="product-item">
                     <img src="https://product.hstatic.net/200000065946/product/pro_nau_noi_that_moho_giuong_ngu_go_tram_vline_1m8_4895664ad9d24c2fac54e2c501b4e7a4_large.jpg" alt="Giường ngủ">
                     <h3>Giường ngủ gỗ tràm MONO VLINE 601</h3>
                     <p>6,290,000 VNĐ</p>
-                    <button onclick="addToCart('Giường ngủ gỗ tràm MONO VLINE 601')">Thêm vào giỏ hàng</button>
+                    <a href="cart.html" class="add-to-cart" onclick="addToCart('Giường ngủ gỗ tràm MONO VLINE 601', 6290000)">Thêm vào giỏ hàng</a>
                 </div>
+
                 <div class="product-item">
                     <img src="https://product.hstatic.net/200000065946/product/pro_nau_noi_that_moho_combo_ban_va_guong_trang_diem_vienna_6_63151bd4018e49e4bdbd590328a73267_large.jpg" alt="Bàn trang điểm">
                     <h3>Bàn trang điểm gỗ đa năng MONO VIENNA 202 màu nâu</h3>
                     <p>3,990,000 VNĐ</p>
-                    <button onclick="addToCart('Bàn trang điểm gỗ đa năng MONO VIENNA 202 màu nâu')">Thêm vào giỏ hàng</button>
+                    <a href="cart.html" class="add-to-cart" onclick="addToCart('Bàn trang điểm gỗ đa năng MONO VIENNA 202 màu nâu', 3990000)">Thêm vào giỏ hàng</a>
                 </div>
             </div>
         </div>
@@ -166,6 +168,18 @@
         </div>
     </footer> 
     
-    <script src="Styles/Trang chủ/test noithat;.js"></script>
+    <script>
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        function addToCart(productName, productPrice) {
+            const product = {
+                name: productName,
+                price: productPrice,
+                quantity: 1
+            };
+            cart.push(product);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${productName} đã được thêm vào giỏ hàng!`);
+        }
+    </script>
 </body>
 </html>

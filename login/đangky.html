@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #eef2f3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+
+        .form-container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            background: #f9f9f9;
+            transition: border 0.3s;
+        }
+
+        .form-group input:focus {
+            border: 1px solid #6a11cb;
+            outline: none;
+            background: #fff;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background: #f7931e;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #e67e22;
+        }
+
+        .success-message {
+            color: green;
+            font-size: 1rem;
+            text-align: center;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Đăng Ký</h2>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="username">Tên Đăng Nhập</label>
+                <input type="text" id="username" name="username" required>
+                <div class="error-message" id="usernameError">Username is required.</div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <div class="error-message" id="emailError">Nhập Email Thích Hợp.</div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Mật Khẩu</label>
+                <input type="password" id="password" name="password" required>
+                <div class="error-message" id="passwordError">Mật Khẩu Ít Nhất 6 Ký Tự.</div>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Xác Nhận Mật Khẩu</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                <div class="error-message" id="confirmPasswordError">Mật Khẩu Không Khớp.</div>
+            </div>
+
+            <button type="submit" class="submit-btn">Đăng Ký</button>
+            <div class="success-message" id="successMessage">Đăng Ký Thành Côngl!</div>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById('registrationForm');
+        const username = document.getElementById('username');
+        const email = document.getElementById('email');
+        const password = document.getElementById('password');
+        const confirmPassword = document.getElementById('confirmPassword');
+    
+        const usernameError = document.getElementById('usernameError');
+        const emailError = document.getElementById('emailError');
+        const passwordError = document.getElementById('passwordError');
+        const confirmPasswordError = document.getElementById('confirmPasswordError');
+        const successMessage = document.getElementById('successMessage');
+    
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+    
+            let isValid = true;
+    
+            // Validate username
+            if (username.value.trim() === '') {
+                usernameError.style.display = 'block';
+                isValid = false;
+            } else {
+                usernameError.style.display = 'none';
+            }
+    
+            // Validate email
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email.value)) {
+                emailError.style.display = 'block';
+                isValid = false;
+            } else {
+                emailError.style.display = 'none';
+            }
+    
+            // Validate password
+            if (password.value.length < 6) {
+                passwordError.style.display = 'block';
+                isValid = false;
+            } else {
+                passwordError.style.display = 'none';
+            }
+    
+            // Validate confirm password
+            if (password.value !== confirmPassword.value) {
+                confirmPasswordError.style.display = 'block';
+                isValid = false;
+            } else {
+                confirmPasswordError.style.display = 'none';
+            }
+    
+            // Show success message if valid and redirect
+            if (isValid) {
+                successMessage.style.display = 'block';
+                setTimeout(() => {
+                    window.location.href = "đangnhap.html"; // Đường dẫn đến trang đăng nhập
+                }, 2000); // Chờ 2 giây trước khi chuyển hướng
+            } else {
+                successMessage.style.display = 'none';
+            }
+        });
+    </script>
+    
+</body>
+</html>

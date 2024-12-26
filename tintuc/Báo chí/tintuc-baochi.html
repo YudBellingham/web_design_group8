@@ -24,13 +24,13 @@
                 </div>
     
                 <div class="auth-buttons">
-                    <a href="#" onclick="showNotification()">Đăng nhập</a>
-                    <a href="#" onclick="showNotification()">Đăng ký</a>
+                    <a href="../../login/đangnhap.html">Đăng nhập</a>
+                    <a href="../../login/đangky.html">Đăng ký</a>
                 </div>
             </div>
 
             <div class="cart">
-                <a href="#cart">🛒 Giỏ Hàng</a>
+                <a href="../../cart.html">🛒 Giỏ Hàng</a>
             </div>
         </div>
 
@@ -158,6 +158,18 @@
         </div>
     </footer>
 
-    <script src="../../Styles/Trang chủ/test noithat;.js"></script>
+    <script>
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        function addToCart(productName, productPrice) {
+            const product = {
+                name: productName,
+                price: productPrice,
+                quantity: 1
+            };
+            cart.push(product);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${productName} đã được thêm vào giỏ hàng!`);
+        }
+    </script>
 </body>
 </html>

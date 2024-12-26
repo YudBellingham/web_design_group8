@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bàn Trang Điểm</title>
     <link rel="stylesheet" href="../Styles/products/dat.css">
+    <style>
+        .add-to-cart {
+            background-color: #f7931e;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            display: inline-block;
+        }
+        
+        .add-to-cart:hover {
+            background-color: #e67e22;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -24,13 +41,13 @@
                 </div>
     
                 <div class="auth-buttons">
-                    <a href="#" onclick="showNotification()">Đăng nhập</a>
-                    <a href="#" onclick="showNotification()">Đăng ký</a>
+                    <a href="../login/đangnhap.html">Đăng nhập</a>
+                    <a href="../login/đangky.html">Đăng ký</a>
                 </div>
             </div>
 
             <div class="cart">
-                <a href="#" onclick="showNotification()">🛒 Giỏ Hàng</a>
+                <a href="../cart.html">🛒 Giỏ Hàng</a>
             </div>
         </div>
 
@@ -45,7 +62,7 @@
                         <li><a href="bantrangdiem.html">Bàn trang điểm</a></li>
                     </ul>
                 </li>
-                <li><a href="#promotions">Khuyến mãi</a></li>
+                <li><a href="../khuyenmai.html">Khuyến mãi</a></li>
                 <li class="dropdown">
                     <a href="#news">Tin tức</a>
                     <ul class="dropdown-menu">
@@ -59,6 +76,12 @@
             </ul>
         </nav>
     </header>
+
+    <nav class="breadcrumb">
+        <a href="../test noithat.html">Trang chủ</a> / 
+        <a href="tuquanao.html">Sản Phẩm</a> / 
+        <span class="current">Bàn Trang Điểm</span>
+    </nav>
 
     <div class="banner">
         <img src="https://file.hstatic.net/200000065946/collection/ban-trang-diem-noi-that-moho_1c453eabc26744e99574d130d012a329_2048x2048.jpg" alt="Banner Image">
@@ -76,6 +99,7 @@
             <div class="colors">
                 <div class="color-brown"></div>
             </div>
+            <a href="../cart.html" class="add-to-cart" onclick="addToCart('Bàn Trang Điểm Gỗ Đa Năng MoNo VIENNA 202 Màu Nâu', 3990000)">Thêm vào giỏ hàng</a>
         </div>
 
         <div class="product">
@@ -88,6 +112,7 @@
             <div class="colors">
                 <div class="color-white"></div>
             </div>
+            <a href="../cart.html" class="add-to-cart" onclick="addToCart('Bàn Trang Điểm Gỗ Đa Năng MoNo VIENNA 202 Màu Tự Nhiên', 3390000)">Thêm vào giỏ hàng</a>
         </div>
     </main>
 
@@ -133,7 +158,20 @@
         </div>
     </footer>
 
-    <script src="../Styles/Trang chủ/test noithat;.js"></script>
+    <script>
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        function addToCart(productName, productPrice) {
+            const product = {
+                name: productName,
+                price: productPrice,
+                quantity: 1
+            };
+            cart.push(product);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${productName} đã được thêm vào giỏ hàng!`);
+        }
+    </script>
 </body>
 </html>
 

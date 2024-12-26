@@ -5,7 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wardrobe Shop</title>
     <link rel="stylesheet" href="../Styles/products/dat.css">
+    <style>
+        .add-to-cart {
+            background-color: #f7931e;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            display: inline-block;
+        }
+        
+        .add-to-cart:hover {
+            background-color: #e67e22;
+        }
+    </style>
 </head>
+
 <body>
     <header class="header">
         <div class="container">
@@ -24,13 +42,13 @@
                 </div>
     
                 <div class="auth-buttons">
-                    <a href="#" onclick="showNotification()">Đăng nhập</a>
-                    <a href="#" onclick="showNotification()">Đăng ký</a>
+                    <a href="../login/đangnhap.html">Đăng nhập</a>
+                    <a href="../login/đangky.html">Đăng ký</a>
                 </div>
             </div>
 
             <div class="cart">
-                <a href="#" onclick="showNotification()">🛒 Giỏ Hàng</a>
+                <a href="../cart.html">🛒 Giỏ Hàng</a>
             </div>
         </div>
 
@@ -45,7 +63,7 @@
                         <li><a href="bantrangdiem.html">Bàn trang điểm</a></li>
                     </ul>
                 </li>
-                <li><a href="#promotions">Khuyến mãi</a></li>
+                <li><a href="../khuyenmai.html">Khuyến mãi</a></li>
                 <li class="dropdown">
                     <a href="#news">Tin tức</a>
                     <ul class="dropdown-menu">
@@ -59,6 +77,12 @@
             </ul>
         </nav>
     </header>
+
+    <nav class="breadcrumb">
+        <a href="../test noithat.html">Trang chủ</a> / 
+        <a href="tuquanao.html">Sản Phẩm</a> / 
+        <span class="current">Tủ Quần Áo</span>
+    </nav>
 
     <div class="banner">
         <img src="https://file.hstatic.net/200000065946/collection/moho_website_banner_1920x450_tu_quan_ao__1__7804169c6a63434ca733d760ab706c28_2048x2048.png" alt="Banner Image">
@@ -76,6 +100,7 @@
             <div class="colors">
                 <div class="color-white"></div>
             </div>
+            <a href="../cart.html" class="add-to-cart" onclick="addToCart('Tủ Quần Áo Gỗ MONO MONZA 4 Cánh', 8990000)">Thêm vào giỏ hàng</a>
         </div>
 
         <div class="product">
@@ -90,6 +115,7 @@
                 <div class="color-brown"></div>
                 <div class="color-black"></div>
             </div>
+            <a href="../cart.html" class="add-to-cart" onclick="addToCart('Tủ Quần Áo Gỗ MONO DALUMD 2 Cánh', 6990000)">Thêm vào giỏ hàng</a>
         </div>
 
         <div class="product">
@@ -103,6 +129,7 @@
             <div class="colors">
                 <div class="color-brown"></div>
             </div>
+            <a href="../cart.html" class="add-to-cart" onclick="addToCart('Tủ Quần Áo Gỗ MONO DALUMD 3 Học Kéo', 5290000)">Thêm vào giỏ hàng</a>
         </div>
 
         <div class="product">
@@ -117,6 +144,7 @@
                 <div class="color-brown"></div>
                 <div class="color-black"></div>
             </div>
+            <a href="../cart.html" class="add-to-cart" onclick="addToCart('Tủ Quần Áo Gỗ MONO DALUMD Thanh Treo', 4490000)">Thêm vào giỏ hàng</a>
         </div>
 
         <div class="product">
@@ -129,6 +157,7 @@
             <div class="colors">
                 <div class="color-black"></div>
             </div>
+            <a href="../cart.html" class="add-to-cart" onclick="addToCart('Tủ Quần Áo Gỗ MONO DALUMD Ngăn Kệ', 4490000)">Thêm vào giỏ hàng</a>
         </div>
 
         <div class="product">
@@ -143,6 +172,7 @@
                 <div class="color-brown"></div>
                 <div class="color-black"></div>
             </div>
+            <a href="../cart.html" class="add-to-cart" onclick="addToCart('Tủ Quần Áo VIENNA VER 1 H50', 1990000)">Thêm vào giỏ hàng</a>
         </div>
 
         <div class="product">
@@ -157,6 +187,7 @@
                 <div class="color-brown"></div>
                 <div class="color-black"></div>
             </div>
+            <a href="../cart.html" class="add-to-cart" onclick="addToCart('Tủ Quần Áo MONO VIENNA Ngăn Kệ VER 1', 4490000)">Thêm vào giỏ hàng</a>
         </div>
 
         <div class="product">
@@ -170,6 +201,7 @@
             <div class="colors">
                 <div class="color-black"></div>
             </div>
+            <a href="../cart.html" class="add-to-cart" onclick="addToCart('Tủ Quần Áo VIENNA Tay Nắm VER 1 H50', 2190000)">Thêm vào giỏ hàng</a>
         </div>
 
         <div class="product">
@@ -182,6 +214,7 @@
             <div class="colors">
                 <div class="color-white"></div>
             </div>
+            <a href="../cart.html" class="add-to-cart" onclick="addToCart('Tủ Quần Áo VIENNA Tay Nắm VER 1 S50', 1908000)">Thêm vào giỏ hàng</a>
         </div>
 
         <div class="product">
@@ -196,6 +229,7 @@
                 <div class="color-white"></div>
                 <div class="color-black"></div>
             </div>
+            <a href="../cart.html" class="add-to-cart" onclick="addToCart('Tủ Gỗ Kệ Ngăn MONO VIENNA 201 2 Màu', 1990000)">Thêm vào giỏ hàng</a>
         </div>
 
         <div class="product">
@@ -208,6 +242,7 @@
             <div class="colors">
                 <div class="color-white"></div>
             </div>
+            <a href="../cart.html" class="add-to-cart" onclick="addToCart('Set Tủ Quần Áo Gỗ MONO HOBRO 301 4 cánh', 14990000)">Thêm vào giỏ hàng</a>
         </div>
 
         <div class="product">
@@ -217,6 +252,7 @@
             <h2>Set Tủ Quần Áo Gỗ MONO VIENNA 201 3 Cánh Kệ Ngăn 4 Màu</h2>
             <p class="price">8,990,000đ <span class="original-price">10,970,000đ</span></p>
             <p>Đã bán: 18</p>
+            <a href="../cart.html" class="add-to-cart" onclick="addToCart('Set Tủ Quần Áo Gỗ MONO VIENNA 201 3 Cánh Kệ Ngăn 4 Màu', 8990000)">Thêm vào giỏ hàng</a>
         </div>
     </main>
 
@@ -262,7 +298,20 @@
         </div>
     </footer> 
     
-    <script src="../Styles/Trang chủ/test noithat;.js"></script>
+    <script>
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        function addToCart(productName, productPrice) {
+            const product = {
+                name: productName,
+                price: productPrice,
+                quantity: 1
+            };
+            cart.push(product);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${productName} đã được thêm vào giỏ hàng!`);
+        }
+    </script>
 </body>
 </html>
 

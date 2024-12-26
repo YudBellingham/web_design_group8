@@ -151,6 +151,30 @@
         .add-review button:hover {
             background-color: #155aa8;
         }
+
+        .breadcrumb {
+        font-size: 16px;
+        margin: 20px 0;
+        }
+
+        .breadcrumb a {
+            text-decoration: none;
+            color: #333; 
+            transition: color 0.3s ease;
+        }
+
+        .breadcrumb a:hover {
+            color: #f4a261; 
+        }
+
+        .breadcrumb a:active {
+            color: #d46a21; 
+        }
+
+        .breadcrumb .current {
+            color: #999;  
+            pointer-events: none; 
+        }
     </style>
 </head>
 <body>
@@ -171,13 +195,13 @@
                 </div>
     
                 <div class="auth-buttons">
-                    <a href="#" onclick="showNotification()">Đăng nhập</a>
-                    <a href="#" onclick="showNotification()">Đăng ký</a>
+                    <a href="../login/đangnhap.html">Đăng nhập</a>
+                    <a href="../login/đangky.html">Đăng ký</a>
                 </div>
             </div>
 
             <div class="cart">
-                <a href="#" onclick="showNotification()">🛒 Giỏ Hàng</a>
+                <a href="../cart.html">🛒 Giỏ Hàng</a>
             </div>
         </div>
 
@@ -192,7 +216,7 @@
                         <li><a href="bantrangdiem.html">Bàn trang điểm</a></li>
                     </ul>
                 </li>
-                <li><a href="#promotions">Khuyến mãi</a></li>
+                <li><a href="../khuyenmai.html">Khuyến mãi</a></li>
                 <li class="dropdown">
                     <a href="#news">Tin tức</a>
                     <ul class="dropdown-menu">
@@ -206,6 +230,13 @@
             </ul>
         </nav>
     </header>
+
+    <nav class="breadcrumb">
+        <a href="../test noithat.html">Trang chủ</a> / 
+        <a href="tuquanao.html">Sản Phẩm</a> /
+        <a href="bantrangdiem.html">Bàn Trang Điểm</a> / 
+        <span class="current">Chi Tiết</span>
+    </nav>
 
     <div class="container">
         <!-- Product Section -->
@@ -299,7 +330,19 @@
         </div>
     </footer> 
     
-    <script src="../Styles/Trang chủ/test noithat;.js"></script>
+    <script>
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        function addToCart(productName, productPrice) {
+            const product = {
+                name: productName,
+                price: productPrice,
+                quantity: 1
+            };
+            cart.push(product);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${productName} đã được thêm vào giỏ hàng!`);
+        }
+    </script>
 </body>
 </html>
 

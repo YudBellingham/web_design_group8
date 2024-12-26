@@ -192,6 +192,8 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 15px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .product img {
@@ -308,6 +310,30 @@ body {
     width: 100%;
     max-width: 300px;
     margin-bottom: 10px;
+}
+
+.breadcrumb {
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #333; 
+    transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    color: #f4a261; 
+}
+
+.breadcrumb a:active {
+    color: #d46a21; 
+}
+
+.breadcrumb .current {
+    color: #999;  
+    pointer-events: none; 
 }
 
 .color-white { background-color: white; }
